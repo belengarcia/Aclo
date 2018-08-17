@@ -2,8 +2,8 @@
     <h1>Here Your destiny</h1>
 </div>
 
-{{#each destiny}}
-<div class='aligner'>
+{{#each destiny as |destiny|}}
+<div>
     <div>
         <img src='{{destiny.image}}'>
     </div>
@@ -11,10 +11,10 @@
         <h2>{{destiny.name}}</h2>
     </div>
     <div>
-        <p>{{destiny.distance}}</p>
+        <p>Distance: {{destiny.distance}}</p>
     </div>
     <div>
-        <p>{{destiny.journey}}</p>
+        <p>Journey: {{destiny.journey}}</p>
     </div>
 </div>
 
