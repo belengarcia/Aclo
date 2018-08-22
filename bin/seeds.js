@@ -8,7 +8,7 @@ let places = [{
     distance: 'Borde exterior de la galaxia. Lo que quiere decir lejísimos',
     journey: 'Plataforma interestelar, y luego viaje a la velocidad de la luz hasta lo territorios del Borde Exterior'
 }, {
-    image: 'https://vignette.wikia.nocookie.net/shadow-of-mordor/images/5/50/Yre1o.jpg/revision/latest?cb=20141222202027&path-prefix=es',
+    image: 'https://www.lagranepoca.com/assets/uploads/2016/01/mordor_by_edli-d2yrha5.jpg',
     name: 'Mordor',
     distance: 'al otro lado de la Tierra Media',
     journey: 'Saliendo desde Hobbiton, más de un mes de camino a pie. El viaje se puede complicar si por el camino te encuentras con orcos, magos oscuros, jinetes negros u otros siervos del Enemigo'

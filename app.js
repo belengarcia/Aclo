@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 
 const indexRouter = require('./routes/index');
 const destinyRouter = require('./routes/destiny');
+const locationRouter = require('./routes/location');
 // const usersRouter = require('./routes/users');
 
 require('./configs/hbs.config');
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/destiny', destinyRouter);
+app.use('/location', locationRouter);
 // app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
