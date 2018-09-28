@@ -37,7 +37,7 @@ function initMap() {
         }
 
         let newPosLat = randomLat(-90, 90)
-        let newPosLng = randomLng(-90, 90)
+        let newPosLng = randomLng(-180, 180)
 
         let newPos = {
             lat : newPosLat,
@@ -75,7 +75,8 @@ function geocodeLatLng(geocoder, map, infowindow, pos) {
     if(status === 'ZERO_RESULTS') {
       initMap()
     } else if (status === 'OK') {
-        if (results[0]) {
+        if (results[0] && results[0].formatted_address !== 'Antártida') {
+          console.log(results[0])
           map.setZoom(11);
           var marker = new google.maps.Marker({
             position: pos,
@@ -83,6 +84,8 @@ function geocodeLatLng(geocoder, map, infowindow, pos) {
           });
           infowindow.setContent(results[0].formatted_address);
           infowindow.open(map, marker);
+        } else if (results[0].formatted_address === 'Antártida'){
+          initMap()
         } else {
           window.alert('No results found');
         }
@@ -95,7 +98,7 @@ function geocodeLatLng(geocoder, map, infowindow, pos) {
           },
           map: map
         });
-        // infowindow.setContent(marker[position].formatted_address);
+        infowindow.setContent('New Zeland');
         infowindow.open(map, marker);
     } else {
       window.alert('Geocoder failed due to: ' + status);
@@ -106,4 +109,7 @@ function geocodeLatLng(geocoder, map, infowindow, pos) {
 
     //https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse
 
-    //-41.298431, 174.763628
+    /*
+Para el pais (para los vuelos)
+results[0].address_components[2].long_name
+*/
